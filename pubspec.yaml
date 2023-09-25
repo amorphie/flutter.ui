@@ -21,7 +21,7 @@ dependencies:
   burgan_core:
     git:
       url: git@bitbucket.org:commencers/burgancore.git
-      ref: 0.0.4
+      ref: 0.0.5
 
   # Dynamic Widget Building
   json_dynamic_widget: ^6.1.2+1
