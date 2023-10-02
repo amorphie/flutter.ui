@@ -20,8 +20,8 @@ dependencies:
   # Core
   burgan_core:
     git:
-      url: git@bitbucket.org:commencers/burgancore.git
-      ref: 0.0.5
+      url: git@github.com:amorphie/flutter.core.git
+      ref: 0.0.6
 
   # Dynamic Widget Building
   json_dynamic_widget: ^6.1.2+1
