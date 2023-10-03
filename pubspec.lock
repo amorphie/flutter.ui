@@ -45,9 +45,9 @@ packages:
     dependency: "direct main"
     description:
       path: "."
-      ref: "0.0.4"
-      resolved-ref: d15d30ad37c34aeece73da1382dd41ba51e292db
-      url: "git@bitbucket.org:commencers/burgancore.git"
+      ref: "0.0.6"
+      resolved-ref: d821001c0e585f6ba1a3a08da034183f1573326a
+      url: "git@github.com:amorphie/flutter.core.git"
     source: git
     version: "0.0.1"
   characters:
