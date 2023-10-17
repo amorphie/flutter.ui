@@ -1,4 +1,3 @@
-import 'package:burgan_core/burgan_core.dart';
 import 'package:flutter/material.dart';
 
 class BrgDropdownFormField extends StatelessWidget {
@@ -18,7 +17,7 @@ class BrgDropdownFormField extends StatelessWidget {
     return DropdownButtonFormField<String>(
       items: itemList.map((e) => DropdownMenuItem<String>(value: e, child: Text(e))).toList(),
       onChanged: (String? value) {
-        controller.text = value.orEmpty;
+        controller.text = value ?? "";
       },
       icon: const Icon(Icons.keyboard_arrow_down_rounded, size: 24),
       isExpanded: true,

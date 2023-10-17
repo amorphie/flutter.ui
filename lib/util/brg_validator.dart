@@ -1,4 +1,3 @@
-import 'package:burgan_core/burgan_core.dart';
 import 'package:flutter/material.dart';
 
 class BrgValidator {
@@ -10,7 +9,7 @@ class BrgValidator {
   final _phoneNumberLength = 10;
 
   FormFieldValidator<String> email({String errorMessage = ""}) =>
-      (input) => _emailRegex.hasMatch(input.orEmpty) ? null : errorMessage;
+      (input) => _emailRegex.hasMatch(input ?? "") ? null : errorMessage;
 
   FormFieldValidator<String> tckn({String errorMessage = ""}) =>
       (input) => (input?.length ?? 0) < tcknLength ? errorMessage : null;

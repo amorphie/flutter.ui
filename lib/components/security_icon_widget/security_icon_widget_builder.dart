@@ -1,5 +1,5 @@
-import 'package:burgan_core/burgan_core.dart';
 import 'package:burgan_ui/components/security_icon_widget/security_icon_widget.dart';
+import 'package:burgan_ui/util/extensions/widget_extensions.dart';
 import 'package:child_builder/child_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:json_dynamic_widget/json_dynamic_widget.dart';

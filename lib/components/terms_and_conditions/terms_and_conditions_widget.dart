@@ -1,4 +1,4 @@
-import 'package:burgan_core/burgan_core.dart';
+import 'package:burgan_ui/util/extensions/widget_extensions.dart';
 import 'package:flutter/material.dart';
 
 class TermsAndConditionsWidget extends StatefulWidget {
