@@ -1,36 +1,22 @@
 import 'package:burgan_ui/components/brg_bullet_list_view/brg_bullet_list_view.dart';
-import 'package:child_builder/child_builder.dart';
-import 'package:flutter/material.dart';
 import 'package:json_dynamic_widget/json_dynamic_widget.dart';
 
-class BrgBulletListViewBuilder extends JsonWidgetBuilder {
-  const BrgBulletListViewBuilder({required this.bulletList}) : super(numSupportedChildren: 0);
+part 'brg_bullet_list_view_builder.g.dart';
 
-  static const type = 'brg_bullet_list_view';
+@JsonWidget(type: 'brg_bullet_list_view')
+abstract class _BrgBulletListViewBuilder extends JsonWidgetBuilder {
+  const _BrgBulletListViewBuilder({
+    required super.args,
+  });
 
-  final List<String> bulletList;
-
-  static BrgBulletListViewBuilder? fromDynamic(
-    dynamic map, {
-    JsonWidgetRegistry? registry,
-  }) {
-    return BrgBulletListViewBuilder(
-      bulletList: List.castFrom(map["bullet_list"]),
-    );
-  }
+  @JsonArgDecoder('bulletList')
+  List<String> _decodeBulletList({required JsonWidgetData data}) => List.castFrom(data.jsonWidgetArgs["bulletList"]);
 
   @override
-  Widget buildCustom({
+  BrgBulletListView buildCustom({
     ChildWidgetBuilder? childBuilder,
     required BuildContext context,
     required JsonWidgetData data,
     Key? key,
-  }) {
-    assert(
-      data.children?.isNotEmpty != true,
-      '[BrgBulletListViewBuilder] does not support children.',
-    );
-
-    return BrgBulletListView(bulletList: bulletList);
-  }
+  });
 }

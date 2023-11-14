@@ -18,14 +18,15 @@ dependencies:
   cupertino_icons: ^1.0.2
 
   # Dynamic Widget Building
-  json_dynamic_widget: # DO NOT SET. It's coming from burgan_core project
-  child_builder: # DO NOT SET. It's coming from burgan_core project
+  json_dynamic_widget: ^7.0.5+1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   flutter_lints: ^2.0.0
+  build_runner: ^2.4.6
+  json_dynamic_widget_codegen: ^1.0.0
 
 flutter:
   uses-material-design: true

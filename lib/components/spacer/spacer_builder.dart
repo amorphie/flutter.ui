@@ -1,31 +1,18 @@
-import 'package:child_builder/child_builder.dart';
-import 'package:flutter/material.dart';
 import 'package:json_dynamic_widget/json_dynamic_widget.dart';
 
-class SpacerBuilder extends JsonWidgetBuilder {
-  const SpacerBuilder() : super(numSupportedChildren: 0);
+part 'spacer_builder.g.dart';
 
-  static const type = 'spacer';
-
-  static SpacerBuilder? fromDynamic(
-    dynamic map, {
-    JsonWidgetRegistry? registry,
-  }) {
-    return const SpacerBuilder();
-  }
+@JsonWidget(type: 'spacer')
+abstract class _SpacerBuilder extends JsonWidgetBuilder {
+  const _SpacerBuilder({
+    required super.args,
+  });
 
   @override
-  Widget buildCustom({
+  Spacer buildCustom({
     ChildWidgetBuilder? childBuilder,
     required BuildContext context,
     required JsonWidgetData data,
     Key? key,
-  }) {
-    assert(
-      data.children?.isNotEmpty != true,
-      '[SpacerBuilder] does not support children.',
-    );
-
-    return const Spacer();
-  }
+  });
 }

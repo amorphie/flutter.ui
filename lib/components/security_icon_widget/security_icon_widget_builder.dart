@@ -1,39 +1,19 @@
 import 'package:burgan_ui/components/security_icon_widget/security_icon_widget.dart';
-import 'package:burgan_ui/util/extensions/widget_extensions.dart';
-import 'package:child_builder/child_builder.dart';
-import 'package:flutter/material.dart';
 import 'package:json_dynamic_widget/json_dynamic_widget.dart';
 
-class SecurityIconWidgetBuilder extends JsonWidgetBuilder {
-  const SecurityIconWidgetBuilder({
-    this.paddingAll,
-  }) : super(numSupportedChildren: 0);
+part 'security_icon_widget_builder.g.dart';
 
-  static const type = 'security_icon_widget';
-
-  final double? paddingAll;
-
-  static SecurityIconWidgetBuilder? fromDynamic(
-    dynamic map, {
-    JsonWidgetRegistry? registry,
-  }) {
-    return SecurityIconWidgetBuilder(
-      paddingAll: (map["paddingAll"] as int?)?.toDouble(),
-    );
-  }
+@JsonWidget(type: 'security_icon_widget')
+abstract class _SecurityIconWidgetBuilder extends JsonWidgetBuilder {
+  const _SecurityIconWidgetBuilder({
+    required super.args,
+  });
 
   @override
-  Widget buildCustom({
+  SecurityIconWidget buildCustom({
     ChildWidgetBuilder? childBuilder,
     required BuildContext context,
     required JsonWidgetData data,
     Key? key,
-  }) {
-    assert(
-      data.children?.isNotEmpty != true,
-      '[SecurityIconWidgetBuilder] does not support children.',
-    );
-
-    return const SecurityIconWidget().paddingAll(paddingAll ?? 0);
-  }
+  });
 }

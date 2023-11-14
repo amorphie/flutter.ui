@@ -8,17 +8,17 @@ class BrgReusableWidgetRegisterer {
 
   init() {
     registry.registerCustomBuilder(
-      SecurityIconWidgetBuilder.type,
+      SecurityIconWidgetBuilder.kType,
       const JsonWidgetBuilderContainer(builder: SecurityIconWidgetBuilder.fromDynamic),
     );
 
     registry.registerCustomBuilder(
-      SpacerBuilder.type,
+      SpacerBuilder.kType,
       const JsonWidgetBuilderContainer(builder: SpacerBuilder.fromDynamic),
     );
 
     registry.registerCustomBuilder(
-      BrgBulletListViewBuilder.type,
+      BrgBulletListViewBuilder.kType,
       const JsonWidgetBuilderContainer(builder: BrgBulletListViewBuilder.fromDynamic),
     );
   }
