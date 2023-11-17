@@ -28,11 +28,4 @@ abstract class NeoSpacing {
   static const double px44 = 44.0;
   static const double px48 = 48.0;
   static const double px52 = 52.0;
-
-  /*static let radiusXs: CGFloat = 4.0
-  static let radiusS: CGFloat = 8.0
-  static let radiusM: CGFloat = 12.0
-  static let radiusL: CGFloat = 16.0
-  static let radiusXl: CGFloat = 20.0
-  static let rounded: CGFloat = 999.0*/
 }
