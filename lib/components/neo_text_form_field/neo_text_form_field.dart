@@ -1,8 +1,8 @@
-import 'package:burgan_ui/core/workflow_form/bloc/workflow_form_bloc.dart';
 import 'package:burgan_ui/util/extensions/widget_extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:neo_core/core/workflow_form/bloc/workflow_form_bloc.dart';
 
 class NeoTextFormField extends StatefulWidget {
   final String dataKey;
