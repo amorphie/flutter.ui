@@ -1,8 +1,8 @@
 /*
  * 
- * neo_spacing.dart
+ * neo_dimens.dart
  * neo_ui
- * 
+ *
  * Created on 17/11/2023.
  * Copyright (c) 2023 Commencis. All rights reserved.
  * 
@@ -13,7 +13,7 @@
  * 
  */
 
-abstract class NeoSpacing {
+abstract class NeoDimens {
   static const double px0 = 0.0;
   static const double px4 = 4.0;
   static const double px8 = 8.0;
