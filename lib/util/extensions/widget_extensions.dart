@@ -1,22 +1,16 @@
 import 'package:flutter/widgets.dart';
 
 extension WidgetExtensions on Widget {
-  Widget paddingAll(double value) {
-    return Padding(padding: EdgeInsets.all(value), child: this);
-  }
+  Padding paddingAll(double value) => _withPadding(EdgeInsets.all(value));
 
-  Widget paddingHorizontal(double value) {
-    return Padding(padding: EdgeInsets.symmetric(horizontal: value), child: this);
-  }
+  Padding paddingSymmetric({double vertical = 0.0, double horizontal = 0.0}) =>
+      _withPadding(EdgeInsets.symmetric(vertical: vertical, horizontal: horizontal));
 
-  Widget paddingVertical(double value) {
-    return Padding(padding: EdgeInsets.symmetric(vertical: value), child: this);
-  }
+  Padding padding({double left = 0.0, double top = 0.0, double right = 0.0, double bottom = 0.0}) =>
+      _withPadding(EdgeInsets.only(left: left, top: top, right: right, bottom: bottom));
 
-  Widget padding({double left = 0.0, double top = 0.0, double right = 0.0, double bottom = 0.0}) {
-    return Padding(
-      padding: EdgeInsets.only(left: left, top: top, right: right, bottom: bottom),
-      child: this,
-    );
-  }
+  Padding paddingLTRB(double left, double top, double right, double bottom) =>
+      _withPadding(EdgeInsets.fromLTRB(left, top, right, bottom));
+
+  Padding _withPadding(EdgeInsets padding) => Padding(padding: padding, child: this);
 }
