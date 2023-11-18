@@ -628,8 +628,8 @@ packages:
     dependency: "direct main"
     description:
       path: "."
-      ref: "0.0.39"
-      resolved-ref: "4db6ddbd39a8e4622b70ab68d14547c284eaa218"
+      ref: "0.0.41"
+      resolved-ref: "38ef3a2f8f50480f810d6b7bb6b3c41c5c72db57"
       url: "https://github.com/amorphie/flutter.core"
     source: git
     version: "0.0.1"

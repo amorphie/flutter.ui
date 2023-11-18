@@ -32,7 +32,7 @@ dependencies:
   neo_core:
     git:
       url: https://github.com/amorphie/flutter.core
-      ref: 0.0.39
+      ref: 0.0.41
 
 dependency_overrides:
   uuid: ^4.1.0 # Delete this overrides when signalr_netcore package in neo_core package is updated
