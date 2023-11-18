@@ -1,4 +1,4 @@
-import 'package:burgan_ui/components/neo_text_form_field/neo_text_form_field.dart';
+import 'package:neo_ui/components/neo_text_form_field/neo_text_form_field.dart';
 import 'package:json_dynamic_widget/json_dynamic_widget.dart';
 
 part 'neo_text_form_field_builder.g.dart';

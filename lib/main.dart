@@ -1,5 +1,5 @@
-import 'package:burgan_ui/util/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:neo_ui/util/theme.dart';
 
 void main() {
   runApp(const MyApp());

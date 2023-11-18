@@ -1,7 +1,7 @@
 library circular_countdown_timer;
 
-import 'package:burgan_ui/components/count_down_timer/circular_count_down_timer_painter.dart';
-import 'package:burgan_ui/components/count_down_timer/count_down_timer_text_format.dart';
+import 'package:neo_ui/components/count_down_timer/circular_count_down_timer_painter.dart';
+import 'package:neo_ui/components/count_down_timer/count_down_timer_text_format.dart';
 import 'package:flutter/material.dart';
 
 /// This widget is taken from https://pub.dev/packages/circular_countdown_timer

@@ -1,7 +1,7 @@
 /*
  * 
  * theme.dart
- * burganui
+ * neo_ui
  * 
  * Created on 17/11/2023.
  * Copyright (c) 2023 Commencis. All rights reserved.
@@ -13,9 +13,9 @@
  * 
  */
 
-import 'package:burgan_ui/util/neo_colors.dart';
-import 'package:burgan_ui/util/neo_text_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:neo_ui/util/neo_colors.dart';
+import 'package:neo_ui/util/neo_text_styles.dart';
 
 class AppTheme {
   static ThemeData light(BuildContext context) {

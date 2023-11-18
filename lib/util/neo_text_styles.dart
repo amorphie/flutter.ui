@@ -1,7 +1,7 @@
 /*
  * 
  * neo_text_styles.dart
- * burganui
+ * neo_ui
  * 
  * Created on 17/11/2023.
  * Copyright (c) 2023 Commencis. All rights reserved.
@@ -13,8 +13,8 @@
  * 
  */
 
-import 'package:burgan_ui/util/neo_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:neo_ui/util/neo_colors.dart';
 
 abstract class NeoTextStyles {
   static const String fontFamily = 'Montserrat';

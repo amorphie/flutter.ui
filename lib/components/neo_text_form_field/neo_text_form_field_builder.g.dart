@@ -6,11 +6,13 @@ part of 'neo_text_form_field_builder.dart';
 // Generator: JsonWidgetLibraryBuilder
 // **************************************************************************
 
+// ignore_for_file: avoid_init_to_null
 // ignore_for_file: deprecated_member_use
 
 // ignore_for_file: prefer_const_constructors
 // ignore_for_file: prefer_const_constructors_in_immutables
 // ignore_for_file: prefer_final_locals
+// ignore_for_file: prefer_if_null_operators
 // ignore_for_file: prefer_single_quotes
 // ignore_for_file: unused_local_variable
 
@@ -32,6 +34,7 @@ class NeoTextFormFieldBuilder extends _NeoTextFormFieldBuilder {
       NeoTextFormFieldBuilder(
         args: map,
       );
+
   @override
   NeoTextFormFieldBuilderModel createModel({
     ChildWidgetBuilder? childBuilder,
@@ -273,7 +276,7 @@ class NeoTextFormFieldBuilderModel extends JsonWidgetBuilderModel {
 
 class NeoTextFormFieldSchema {
   static const id =
-      'https://peiffer-innovations.github.io/flutter_json_schemas/schemas/burgankuwait/neo_text_form_field.json';
+      'https://peiffer-innovations.github.io/flutter_json_schemas/schemas/burgan_ui/neo_text_form_field.json';
 
   static final schema = <String, Object>{
     r'$schema': 'http://json-schema.org/draft-07/schema#',
