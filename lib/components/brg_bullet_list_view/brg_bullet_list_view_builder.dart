@@ -1,4 +1,4 @@
-import 'package:burgan_ui/components/brg_bullet_list_view/brg_bullet_list_view.dart';
+import 'package:neo_ui/components/brg_bullet_list_view/brg_bullet_list_view.dart';
 import 'package:json_dynamic_widget/json_dynamic_widget.dart';
 
 part 'brg_bullet_list_view_builder.g.dart';

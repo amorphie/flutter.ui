@@ -1,5 +1,5 @@
-import 'package:burgan_ui/core_widgets/neo_component_tree_builder/bloc/neo_component_tree_builder_bloc.dart';
-import 'package:burgan_ui/core_widgets/neo_component_tree_builder/network/i_components_network_manager.dart';
+import 'package:neo_ui/core_widgets/neo_component_tree_builder/bloc/neo_component_tree_builder_bloc.dart';
+import 'package:neo_ui/core_widgets/neo_component_tree_builder/network/i_components_network_manager.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:json_dynamic_widget/json_dynamic_widget.dart';
 

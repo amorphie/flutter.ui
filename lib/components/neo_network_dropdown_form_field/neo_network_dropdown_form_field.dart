@@ -1,5 +1,5 @@
-import 'package:burgan_ui/components/neo_network_dropdown_form_field/bloc/neo_network_dropdown_form_field_bloc.dart';
-import 'package:burgan_ui/components/neo_network_dropdown_form_field/network/neo_network_dropdown_form_field_network_manager.dart';
+import 'package:neo_ui/components/neo_network_dropdown_form_field/bloc/neo_network_dropdown_form_field_bloc.dart';
+import 'package:neo_ui/components/neo_network_dropdown_form_field/network/neo_network_dropdown_form_field_network_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:neo_core/core/workflow_form/bloc/workflow_form_bloc.dart';
