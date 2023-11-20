@@ -21,7 +21,7 @@ dependencies:
   neo_core:
     git:
       url: https://github.com/amorphie/flutter.core
-      ref: 0.0.42
+      ref: 0.0.44
 
   # DI
   get_it: ^7.6.0
