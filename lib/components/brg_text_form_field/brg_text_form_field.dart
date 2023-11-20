@@ -1,9 +1,10 @@
-import 'package:neo_ui/util/brg_input_formatters.dart';
-import 'package:neo_ui/util/brg_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:neo_ui/util/brg_input_formatters.dart';
+import 'package:neo_ui/util/brg_validator.dart';
 
+@Deprecated("Use NeoTextFormField instead")
 class BrgTextFormField extends StatelessWidget {
   final String labelText;
   final TextEditingController controller;

@@ -170,7 +170,7 @@ class BrgBulletListViewBuilderModel extends JsonWidgetBuilderModel {
 
 class BrgBulletListViewSchema {
   static const id =
-      'https://peiffer-innovations.github.io/flutter_json_schemas/schemas/burgan_ui/brg_bullet_list_view.json';
+      'https://peiffer-innovations.github.io/flutter_json_schemas/schemas/neo_ui/brg_bullet_list_view.json';
 
   static final schema = <String, Object>{
     r'$schema': 'http://json-schema.org/draft-07/schema#',

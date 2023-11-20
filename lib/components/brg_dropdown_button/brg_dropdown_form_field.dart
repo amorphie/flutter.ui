@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+@Deprecated("Update as NeoDropdownFormField")
 class BrgDropdownFormField extends StatelessWidget {
   final List<String> itemList;
   final TextEditingController controller;

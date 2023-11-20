@@ -1,6 +1,7 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 
+@Deprecated("Update as NeoImageSelectorWidget")
 class BrgImageSelectorWidget extends StatefulWidget {
   final List<String>? urlList;
   final double horizontalPadding;
