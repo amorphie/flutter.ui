@@ -1,5 +1,5 @@
 /*
- * burganui
+ * neo_ui
  *
  * Created on 17/11/2023.
  * Copyright (c) 2023 Commencis. All rights reserved.
@@ -13,5 +13,4 @@
 extension NullableExtensions<T> on T? {
   bool get isNull => this == null;
   bool get isNotNull => !isNull;
-  T or(T defaultValue) => this ?? defaultValue;
 }

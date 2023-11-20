@@ -1,8 +1,6 @@
 /*
- * 
- * neo_dimens.dart
  * neo_ui
- *
+ * 
  * Created on 17/11/2023.
  * Copyright (c) 2023 Commencis. All rights reserved.
  * 

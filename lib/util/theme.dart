@@ -1,6 +1,4 @@
 /*
- * 
- * theme.dart
  * neo_ui
  * 
  * Created on 17/11/2023.

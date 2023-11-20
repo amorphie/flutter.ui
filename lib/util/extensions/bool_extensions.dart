@@ -1,5 +1,5 @@
 /*
- * burganui
+ * neo_ui
  *
  * Created on 17/11/2023.
  * Copyright (c) 2023 Commencis. All rights reserved.
@@ -10,13 +10,7 @@
  * Any reproduction of this material must contain this notice.
  */
 
-import 'package:neo_ui/util/extensions/nullable_extensions.dart';
-
-extension BoolExtensions on bool {
-  bool get toggle => !this;
-}
-
 extension NullableBoolExtensions on bool? {
-  bool get orTrue => or(true);
-  bool get orFalse => or(false);
+  bool get orTrue => this ?? true;
+  bool get orFalse => this ?? false;
 }

@@ -1,5 +1,5 @@
 /*
- * burganui
+ * neo_ui
  *
  * Created on 17/11/2023.
  * Copyright (c) 2023 Commencis. All rights reserved.
@@ -13,7 +13,7 @@
 import 'package:neo_ui/util/extensions/nullable_extensions.dart';
 
 extension NullableStringExtensions on String? {
-  String get orEmpty => or("");
+  String get orEmpty => this ?? "";
   bool get isNullOrBlank => isNull || this!.isBlank;
 }
 

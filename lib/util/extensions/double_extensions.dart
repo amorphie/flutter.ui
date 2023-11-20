@@ -1,5 +1,5 @@
 /*
- * burganui
+ * neo_ui
  *
  * Created on 17/11/2023.
  * Copyright (c) 2023 Commencis. All rights reserved.
@@ -10,8 +10,6 @@
  * Any reproduction of this material must contain this notice.
  */
 
-import 'package:neo_ui/util/extensions/nullable_extensions.dart';
-
 extension DoubleExtensions on double? {
-  double get orZero => or(0);
+  double get orZero => this ?? 0;
 }
