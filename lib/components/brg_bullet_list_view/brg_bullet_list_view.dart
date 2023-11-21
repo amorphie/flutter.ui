@@ -20,6 +20,6 @@ class BrgBulletListView extends StatelessWidget {
         const Icon(Icons.circle, size: 6).padding(top: 4, right: 4),
         Flexible(child: Text(description, maxLines: 3)),
       ],
-    ).paddingVertical(4);
+    ).paddingSymmetric(vertical: 4);
   }
 }

@@ -11,12 +11,11 @@
  * 
  */
 
-import 'package:flutter/material.dart';
-import 'package:neo_ui/util/neo_colors.dart';
-import 'package:neo_ui/util/neo_text_styles.dart';
-
-class AppTheme {
-  static ThemeData light(BuildContext context) {
-    return ThemeData(fontFamily: NeoTextStyles.fontFamily, scaffoldBackgroundColor: NeoColors.bgLight);
-  }
+abstract class NeoRadius {
+  static double px4 = 4.0;
+  static double px8 = 8.0;
+  static double px12 = 12.0;
+  static double px16 = 16.0;
+  static double px20 = 20.0;
+  static double rounded = 999.0;
 }
