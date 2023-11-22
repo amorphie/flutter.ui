@@ -1,20 +1,20 @@
-import 'package:neo_ui/util/extensions/widget_extensions.dart';
 import 'package:flutter/material.dart';
+import 'package:neo_ui/util/extensions/widget_extensions.dart';
 
 class TermsAndConditionsWidget extends StatefulWidget {
   final String titleText;
   final String contentText;
   final String toggleText;
-  final Function(bool) onSwitchToggled;
+  final Function({bool status}) onSwitchToggled;
   final double? contentMaxHeight;
 
   const TermsAndConditionsWidget({
-    Key? key,
     required this.titleText,
     required this.contentText,
     required this.toggleText,
     required this.onSwitchToggled,
     this.contentMaxHeight,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -43,7 +43,7 @@ class _TermsAndConditionsWidgetState extends State<TermsAndConditionsWidget> {
 
     return ConstrainedBox(
       constraints: BoxConstraints(maxHeight: contentMaxHeight),
-      child: Container(
+      child: DecoratedBox(
         decoration: BoxDecoration(
           border: Border.all(color: borderColor, width: 3),
           borderRadius: BorderRadius.circular(20.0),
@@ -78,7 +78,7 @@ class _TermsAndConditionsWidgetState extends State<TermsAndConditionsWidget> {
           value: switchValue,
           onChanged: (newValue) {
             switchValue = newValue;
-            widget.onSwitchToggled(newValue);
+            widget.onSwitchToggled(status: newValue);
             setState(() {});
           },
           inactiveThumbColor: switchInactiveThumbColor,

@@ -6,11 +6,12 @@ class BrgDropdownFormField extends StatelessWidget {
   final TextEditingController controller;
   final String? labelText;
 
+  @Deprecated("Update as NeoDropdownFormField")
   const BrgDropdownFormField({
-    Key? key,
     required this.itemList,
     required this.controller,
     this.labelText,
+    Key? key,
   }) : super(key: key);
 
   @override

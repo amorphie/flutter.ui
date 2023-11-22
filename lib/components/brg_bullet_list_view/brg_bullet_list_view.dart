@@ -1,15 +1,15 @@
-import 'package:neo_ui/util/extensions/widget_extensions.dart';
 import 'package:flutter/material.dart';
+import 'package:neo_ui/util/extensions/widget_extensions.dart';
 
 class BrgBulletListView extends StatelessWidget {
   final List<String> bulletList;
 
-  const BrgBulletListView({Key? key, required this.bulletList}) : super(key: key);
+  const BrgBulletListView({required this.bulletList, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [...bulletList.map((e) => _buildBulletItemRow(e)).toList()],
+      children: [...bulletList.map(_buildBulletItemRow)],
     );
   }
 

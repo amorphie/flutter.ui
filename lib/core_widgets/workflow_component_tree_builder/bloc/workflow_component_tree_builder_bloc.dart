@@ -1,9 +1,9 @@
 import 'dart:convert';
 
-import 'package:neo_ui/core_widgets/workflow_component_tree_builder/network/workflow_components_network_manager.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:neo_core/core/network/models/neo_response.dart';
+import 'package:neo_ui/core_widgets/workflow_component_tree_builder/network/workflow_components_network_manager.dart';
 
 part 'workflow_component_tree_builder_event.dart';
 part 'workflow_component_tree_builder_state.dart';

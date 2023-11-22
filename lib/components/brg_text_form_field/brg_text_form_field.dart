@@ -17,8 +17,8 @@ class BrgTextFormField extends StatelessWidget {
   final String? hintText;
   final bool obscureText;
 
+  @Deprecated("Use NeoTextFormField instead")
   const BrgTextFormField({
-    super.key,
     required this.labelText,
     required this.controller,
     this.prefixIcon,
@@ -29,6 +29,7 @@ class BrgTextFormField extends StatelessWidget {
     this.maxLength,
     this.hintText,
     this.obscureText = false,
+    super.key,
   });
 
   @override
@@ -51,8 +52,8 @@ class BrgTextFormField extends StatelessWidget {
     );
   }
 
+  @Deprecated("Use NeoTextFormField instead")
   factory BrgTextFormField.tckn({
-    required BuildContext context,
     required TextEditingController controller,
     String labelText = "T.C. Identification Number",
   }) {
@@ -68,8 +69,8 @@ class BrgTextFormField extends StatelessWidget {
     );
   }
 
+  @Deprecated("Use NeoTextFormField instead")
   factory BrgTextFormField.phoneNumber({
-    required BuildContext context,
     required TextEditingController controller,
     String iconAssetPath = "assets/images/ic_keyboard_numeric.svg",
     String labelText = "Phone Number",
@@ -88,8 +89,8 @@ class BrgTextFormField extends StatelessWidget {
     );
   }
 
+  @Deprecated("Use NeoTextFormField instead")
   factory BrgTextFormField.password({
-    required BuildContext context,
     required TextEditingController controller,
     required String labelText,
     required FormFieldValidator<String> validator,

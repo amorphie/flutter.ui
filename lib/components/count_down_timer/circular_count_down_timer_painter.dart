@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
 import 'dart:math' as math;
+
+import 'package:flutter/material.dart';
 
 class CircularCountDownTimerPainter extends CustomPainter {
   CircularCountDownTimerPainter({
@@ -17,31 +18,35 @@ class CircularCountDownTimerPainter extends CustomPainter {
   }) : super(repaint: animation);
 
   final Animation<double>? animation;
-  final Color? fillColor, ringColor, backgroundColor;
+  final Color? fillColor;
+  final Color? ringColor;
+  final Color? backgroundColor;
   final double? strokeWidth;
   final StrokeCap? strokeCap;
-  final bool? isReverse, isReverseAnimation;
-  final Gradient? fillGradient, ringGradient, backgroundGradient;
+  final bool? isReverse;
+  final bool? isReverseAnimation;
+  final Gradient? fillGradient;
+  final Gradient? ringGradient;
+  final Gradient? backgroundGradient;
 
   @override
   void paint(Canvas canvas, Size size) {
-    Paint paint = Paint()
+    final Paint paint = Paint()
       ..color = ringColor!
       ..strokeWidth = strokeWidth!
       ..strokeCap = strokeCap!
       ..style = PaintingStyle.stroke;
 
     if (ringGradient != null) {
-      final rect = Rect.fromCircle(
-          center: size.center(Offset.zero), radius: size.width / 2);
+      final rect = Rect.fromCircle(center: size.center(Offset.zero), radius: size.width / 2);
       paint.shader = ringGradient!.createShader(rect);
     } else {
       paint.shader = null;
     }
 
     canvas.drawCircle(size.center(Offset.zero), size.width / 2, paint);
-    double progress = (animation!.value) * 2 * math.pi;
-    double startAngle = math.pi * 1.5;
+    final double progress = (animation!.value) * 2 * math.pi;
+    const double startAngle = math.pi * 1.5;
 
     // if ((!isReverse! && isReverseAnimation!) ||
     //     (isReverse! && isReverseAnimation!)) {
@@ -50,12 +55,12 @@ class CircularCountDownTimerPainter extends CustomPainter {
     // }
 
     if (fillGradient != null) {
-      final rect = Rect.fromCircle(
-          center: size.center(Offset.zero), radius: size.width / 2);
+      final rect = Rect.fromCircle(center: size.center(Offset.zero), radius: size.width / 2);
       paint.shader = fillGradient!.createShader(rect);
     } else {
-      paint.shader = null;
-      paint.color = fillColor!;
+      paint
+        ..shader = null
+        ..color = fillColor!;
     }
 
     canvas.drawArc(Offset.zero & size, startAngle, progress, false, paint);
@@ -64,14 +69,12 @@ class CircularCountDownTimerPainter extends CustomPainter {
       final backgroundPaint = Paint();
 
       if (backgroundGradient != null) {
-        final rect = Rect.fromCircle(
-            center: size.center(Offset.zero), radius: size.width / 2.2);
+        final rect = Rect.fromCircle(center: size.center(Offset.zero), radius: size.width / 2.2);
         backgroundPaint.shader = backgroundGradient!.createShader(rect);
       } else {
         backgroundPaint.color = backgroundColor!;
       }
-      canvas.drawCircle(
-          size.center(Offset.zero), size.width / 2.2, backgroundPaint);
+      canvas.drawCircle(size.center(Offset.zero), size.width / 2.2, backgroundPaint);
     }
   }
 

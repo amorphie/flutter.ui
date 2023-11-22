@@ -1,7 +1,7 @@
-import 'package:neo_ui/core_widgets/workflow_component_tree_builder/bloc/workflow_component_tree_builder_bloc.dart';
-import 'package:neo_ui/core_widgets/workflow_component_tree_builder/network/workflow_components_network_manager.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:json_dynamic_widget/json_dynamic_widget.dart';
+import 'package:neo_ui/core_widgets/workflow_component_tree_builder/bloc/workflow_component_tree_builder_bloc.dart';
+import 'package:neo_ui/core_widgets/workflow_component_tree_builder/network/workflow_components_network_manager.dart';
 
 class WorkflowComponentTreeBuilder extends StatelessWidget {
   final WorkflowComponentsNetworkManager componentsNetworkManager;

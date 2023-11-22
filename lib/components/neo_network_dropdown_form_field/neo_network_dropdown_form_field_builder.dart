@@ -1,5 +1,5 @@
-import 'package:neo_ui/components/neo_network_dropdown_form_field/neo_network_dropdown_form_field.dart';
 import 'package:json_dynamic_widget/json_dynamic_widget.dart';
+import 'package:neo_ui/components/neo_network_dropdown_form_field/neo_network_dropdown_form_field.dart';
 
 part 'neo_network_dropdown_form_field_builder.g.dart';
 

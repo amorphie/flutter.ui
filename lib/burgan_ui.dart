@@ -6,7 +6,7 @@ export 'util/brg_input_formatters.dart';
 export 'util/brg_validator.dart';
 
 class BurganUI {
-  static init() {
+  static void init() {
     BrgReusableWidgetRegisterer().init();
   }
 }

@@ -1,8 +1,8 @@
 library circular_countdown_timer;
 
+import 'package:flutter/material.dart';
 import 'package:neo_ui/components/count_down_timer/circular_count_down_timer_painter.dart';
 import 'package:neo_ui/components/count_down_timer/count_down_timer_text_format.dart';
-import 'package:flutter/material.dart';
 
 /// This widget is taken from https://pub.dev/packages/circular_countdown_timer
 /// Create a Circular Countdown Timer.
@@ -127,14 +127,14 @@ class CircularCountDownTimerState extends State<CircularCountDownTimer> with Tic
         timeStamp = _getTime(Duration(seconds: widget.duration));
       }
     } else {
-      Duration? duration = _controller!.duration! * _controller!.value;
+      final duration = _controller!.duration! * _controller!.value;
       if (widget.timeFormatterFunction != null) {
         return Function.apply(widget.timeFormatterFunction!, [_getTime, duration]).toString();
       } else {
         timeStamp = _getTime(duration);
       }
     }
-    if (widget.onChange != null) widget.onChange!(timeStamp);
+    widget.onChange?.call(timeStamp);
 
     return timeStamp;
   }
@@ -166,7 +166,7 @@ class CircularCountDownTimerState extends State<CircularCountDownTimer> with Tic
       if (widget.isReverse) {
         _controller?.value = 1 - (widget.initialDuration / widget.duration);
       } else {
-        _controller?.value = (widget.initialDuration / widget.duration);
+        _controller?.value = widget.initialDuration / widget.duration;
       }
 
       countDownController?.start();
@@ -188,7 +188,7 @@ class CircularCountDownTimerState extends State<CircularCountDownTimer> with Tic
     }
     // For s format
     else if (widget.textFormat == CountdownTimerTextFormat.S) {
-      return '${(duration.inSeconds)}';
+      return '${duration.inSeconds}';
     } else {
       // Default format
       return _defaultFormat(duration);
@@ -206,11 +206,11 @@ class CircularCountDownTimerState extends State<CircularCountDownTimer> with Tic
   }
 
   void _onStart() {
-    if (widget.onStart != null) widget.onStart!();
+    widget.onStart?.call();
   }
 
   void _onComplete() {
-    if (widget.onComplete != null) widget.onComplete!();
+    widget.onComplete?.call();
   }
 
   @override
@@ -239,10 +239,10 @@ class CircularCountDownTimerState extends State<CircularCountDownTimer> with Tic
 
           /// [AnimationController]'s value is manually set to [1.0] that's why [AnimationStatus.completed] is invoked here this animation is [isReverse]
           /// Only call the [_onComplete] block when the animation is not reversed.
-          if (!widget.isReverse) _onComplete();
+          if (!widget.isReverse) {
+            _onComplete();
+          }
           break;
-        default:
-        // Do nothing
       }
     });
 
@@ -257,47 +257,50 @@ class CircularCountDownTimerState extends State<CircularCountDownTimer> with Tic
       width: widget.width,
       height: widget.height,
       child: AnimatedBuilder(
-          animation: _controller!,
-          builder: (context, child) {
-            return Align(
-              child: AspectRatio(
-                aspectRatio: 1.0,
-                child: Stack(
-                  children: <Widget>[
-                    Positioned.fill(
-                      child: CustomPaint(
-                        painter: CircularCountDownTimerPainter(
-                            animation: _countDownAnimation ?? _controller,
-                            fillColor: widget.fillColor,
-                            fillGradient: widget.fillGradient,
-                            ringColor: widget.ringColor,
-                            ringGradient: widget.ringGradient,
-                            strokeWidth: widget.strokeWidth,
-                            strokeCap: widget.strokeCap,
-                            isReverse: widget.isReverse,
-                            isReverseAnimation: widget.isReverseAnimation,
-                            backgroundColor: widget.backgroundColor,
-                            backgroundGradient: widget.backgroundGradient),
+        animation: _controller!,
+        builder: (context, child) {
+          return Align(
+            child: AspectRatio(
+              aspectRatio: 1.0,
+              child: Stack(
+                children: <Widget>[
+                  Positioned.fill(
+                    child: CustomPaint(
+                      painter: CircularCountDownTimerPainter(
+                        animation: _countDownAnimation ?? _controller,
+                        fillColor: widget.fillColor,
+                        fillGradient: widget.fillGradient,
+                        ringColor: widget.ringColor,
+                        ringGradient: widget.ringGradient,
+                        strokeWidth: widget.strokeWidth,
+                        strokeCap: widget.strokeCap,
+                        isReverse: widget.isReverse,
+                        isReverseAnimation: widget.isReverseAnimation,
+                        backgroundColor: widget.backgroundColor,
+                        backgroundGradient: widget.backgroundGradient,
                       ),
                     ),
-                    widget.isTimerTextShown
-                        ? Align(
-                            alignment: FractionalOffset.center,
-                            child: Text(
-                              time,
-                              style: widget.textStyle ??
-                                  const TextStyle(
-                                    fontSize: 16.0,
-                                    color: Colors.black,
-                                  ),
+                  ),
+                  if (widget.isTimerTextShown)
+                    Align(
+                      alignment: FractionalOffset.center,
+                      child: Text(
+                        time,
+                        style: widget.textStyle ??
+                            const TextStyle(
+                              fontSize: 16.0,
+                              color: Colors.black,
                             ),
-                          )
-                        : Container(),
-                  ],
-                ),
+                      ),
+                    )
+                  else
+                    Container(),
+                ],
               ),
-            );
-          }),
+            ),
+          );
+        },
+      ),
     );
   }
 
@@ -313,8 +316,12 @@ class CircularCountDownTimerState extends State<CircularCountDownTimer> with Tic
 class CountDownController {
   CircularCountDownTimerState? _state;
   bool? _isReverse;
-  bool isStarted = false, isPaused = false, isResumed = false, isRestarted = false;
-  int? _initialDuration, _duration;
+  bool isStarted = false;
+  bool isPaused = false;
+  bool isResumed = false;
+  bool isRestarted = false;
+  int? _initialDuration;
+  int? _duration;
 
   /// This Method Starts the Countdown Timer
   void start() {

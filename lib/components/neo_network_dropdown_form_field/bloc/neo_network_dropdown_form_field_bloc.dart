@@ -1,7 +1,7 @@
-import 'package:neo_ui/components/neo_network_dropdown_form_field/network/neo_network_dropdown_form_field_network_manager.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:neo_core/neo_core.dart';
+import 'package:neo_ui/components/neo_network_dropdown_form_field/network/neo_network_dropdown_form_field_network_manager.dart';
 import 'package:rxdart/rxdart.dart';
 
 part 'neo_network_dropdown_form_field_event.dart';

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
+@Deprecated("Do not use custom validator. Validate with regex coming from component response")
 class BrgValidator {
   final int tcknLength;
 
+  @Deprecated("Do not use custom validator. Validate with regex coming from component response")
   BrgValidator({this.tcknLength = 11});
 
   final _emailRegex = RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+");

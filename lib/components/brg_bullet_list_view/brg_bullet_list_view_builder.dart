@@ -1,5 +1,5 @@
-import 'package:neo_ui/components/brg_bullet_list_view/brg_bullet_list_view.dart';
 import 'package:json_dynamic_widget/json_dynamic_widget.dart';
+import 'package:neo_ui/components/brg_bullet_list_view/brg_bullet_list_view.dart';
 
 part 'brg_bullet_list_view_builder.g.dart';
 
@@ -14,9 +14,9 @@ abstract class _BrgBulletListViewBuilder extends JsonWidgetBuilder {
 
   @override
   BrgBulletListView buildCustom({
-    ChildWidgetBuilder? childBuilder,
     required BuildContext context,
     required JsonWidgetData data,
+    ChildWidgetBuilder? childBuilder,
     Key? key,
   });
 }

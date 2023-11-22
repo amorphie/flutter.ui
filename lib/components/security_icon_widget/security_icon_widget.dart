@@ -1,5 +1,5 @@
-import 'package:neo_ui/util/extensions/widget_extensions.dart';
 import 'package:flutter/material.dart';
+import 'package:neo_ui/util/extensions/widget_extensions.dart';
 
 class SecurityIconWidget extends StatelessWidget {
   final String text;
@@ -24,7 +24,7 @@ class SecurityIconWidget extends StatelessWidget {
         Text(
           text,
           style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12),
-        ).padding(left: 4)
+        ).padding(left: 4),
       ],
     );
   }

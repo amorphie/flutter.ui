@@ -10,9 +10,9 @@ abstract class _SpacerBuilder extends JsonWidgetBuilder {
 
   @override
   Spacer buildCustom({
-    ChildWidgetBuilder? childBuilder,
     required BuildContext context,
     required JsonWidgetData data,
+    ChildWidgetBuilder? childBuilder,
     Key? key,
   });
 }

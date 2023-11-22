@@ -1,6 +1,7 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 
+// ignore_for_file: deprecated_member_use_from_same_package
 @Deprecated("Update as NeoImageSelectorWidget")
 class BrgImageSelectorWidget extends StatefulWidget {
   final List<String>? urlList;
@@ -12,8 +13,8 @@ class BrgImageSelectorWidget extends StatefulWidget {
   final double? width;
   final double? height;
 
+  @Deprecated("Update as NeoImageSelectorWidget")
   const BrgImageSelectorWidget._({
-    Key? key,
     required this.horizontalPadding,
     required this.crossAxisCount,
     required this.onSelected,
@@ -22,8 +23,10 @@ class BrgImageSelectorWidget extends StatefulWidget {
     this.urlList,
     this.width,
     this.height,
+    Key? key,
   }) : super(key: key);
 
+  @Deprecated("Update as NeoImageSelectorWidget")
   factory BrgImageSelectorWidget.network({
     required List<String> urlList,
     required Function(int selectedItemIndex) onSelected,
@@ -65,16 +68,15 @@ class _BrgImageSelectorWidgetState extends State<BrgImageSelectorWidget> {
         mainAxisSpacing: widget.mainAxisSpacing,
         crossAxisSpacing: widget.crossAxisSpacing,
         crossAxisCount: widget.crossAxisCount,
-        children: widget.urlList == null
-            ? []
-            : widget.urlList!.mapIndexed((index, url) => _buildNetworkImageWithSelectionBorder(index, url)).toList(),
+        children:
+            widget.urlList == null ? [] : widget.urlList!.mapIndexed(_buildNetworkImageWithSelectionBorder).toList(),
       ),
     );
   }
 
   Widget _buildNetworkImageWithSelectionBorder(int itemIndex, String url) {
     return itemIndex == selectedItemIndex
-        ? Container(
+        ? DecoratedBox(
             decoration: BoxDecoration(
               border: Border.all(color: Colors.blueAccent, width: 3),
               borderRadius: BorderRadius.circular(12.0),
@@ -86,7 +88,7 @@ class _BrgImageSelectorWidgetState extends State<BrgImageSelectorWidget> {
 
   Widget _buildNetworkImageCard(int itemIndex, String url) {
     return Card(
-      margin: const EdgeInsets.all(0),
+      margin: EdgeInsets.zero,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
       elevation: 2,
       child: ClipRRect(
@@ -102,7 +104,9 @@ class _BrgImageSelectorWidgetState extends State<BrgImageSelectorWidget> {
             url,
             fit: BoxFit.fill,
             loadingBuilder: (BuildContext context, Widget child, ImageChunkEvent? loadingProgress) {
-              if (loadingProgress == null) return child;
+              if (loadingProgress == null) {
+                return child;
+              }
               return Center(
                 child: CircularProgressIndicator(
                   value: loadingProgress.expectedTotalBytes != null

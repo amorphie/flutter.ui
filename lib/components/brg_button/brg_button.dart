@@ -1,19 +1,19 @@
-import 'package:neo_ui/util/extensions/widget_extensions.dart';
 import 'package:flutter/material.dart';
+import 'package:neo_ui/util/extensions/widget_extensions.dart';
 
 const _buttonColor = Color(0xFF0069AA); // TODO: Move to colors file
 
 class BrgButton extends StatelessWidget {
   const BrgButton({
-    Key? key,
     required this.text,
     required this.onPressed,
     this.color,
     this.textColor,
+    Key? key,
   }) : super(key: key);
 
   final String text;
-  final Function onPressed;
+  final Function() onPressed;
   final Color? color;
   final Color? textColor;
 
@@ -24,7 +24,7 @@ class BrgButton extends StatelessWidget {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
         backgroundColor: color ?? _buttonColor,
       ),
-      onPressed: () => onPressed(),
+      onPressed: onPressed,
       child: Text(text, style: TextStyle(color: textColor)).padding(left: 16, right: 16, top: 20, bottom: 20),
     );
   }
