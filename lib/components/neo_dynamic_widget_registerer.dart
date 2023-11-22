@@ -5,7 +5,7 @@ import 'package:neo_ui/components/neo_text_form_field/neo_text_form_field_builde
 import 'package:neo_ui/components/security_icon_widget/security_icon_widget_builder.dart';
 import 'package:neo_ui/components/spacer/spacer_builder.dart';
 
-class BrgReusableWidgetRegisterer {
+class NeoDynamicWidgetRegisterer {
   static final registry = JsonWidgetRegistry.instance;
 
   void init() {

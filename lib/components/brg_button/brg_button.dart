@@ -3,6 +3,7 @@ import 'package:neo_ui/util/extensions/widget_extensions.dart';
 
 const _buttonColor = Color(0xFF0069AA); // TODO: Move to colors file
 
+@Deprecated("Refactor as NeoButton")
 class BrgButton extends StatelessWidget {
   const BrgButton({
     required this.text,

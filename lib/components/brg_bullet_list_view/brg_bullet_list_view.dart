@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:neo_ui/util/extensions/widget_extensions.dart';
 
+@Deprecated("Refactor as NeoBulletListView")
 class BrgBulletListView extends StatelessWidget {
   final List<String> bulletList;
 
+  @Deprecated("Refactor as NeoBulletListView")
   const BrgBulletListView({required this.bulletList, Key? key}) : super(key: key);
 
   @override
